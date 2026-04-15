@@ -20,7 +20,7 @@ export function TransitionSection() {
             Most businesses invest in websites that look good but fail to perform. I help brands turn their digital presence into a strategic asset — combining design, performance, and AI-driven systems to attract, convert, and scale.
           </p>
           <p className="text-lg md:text-xl text-[#ff6a3d] italic font-bold mt-6 max-w-2xl mx-auto text-center">
-            &ldquo;We are the right solution for small<br />and medium-sized businesses&rdquo;
+            We are the right solution for small<br />and medium-sized businesses
           </p>
         </motion.div>
       </div>
