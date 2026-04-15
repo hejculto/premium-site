@@ -54,11 +54,25 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/90 max-w-xl mx-auto"
+            className="text-white/90 max-w-xl mx-auto mb-8"
             style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}
           >
             {hero.subheadline}
           </motion.p>
+
+          <motion.a
+            href="#about"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            onClick={(e) => {
+              e.preventDefault()
+              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            className="inline-block px-8 py-3 text-white border-2 border-white rounded-full text-sm font-medium tracking-wide hover:bg-white/10 transition-colors"
+          >
+            Let me introduce myself.
+          </motion.a>
         </motion.div>
       </div>
 
