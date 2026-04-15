@@ -25,7 +25,7 @@ export function Hero() {
       
       {/* Fallback overlay naranja semitransparente */}
       <div 
-        className="absolute inset-0 bg-[#ff6a3d]/70 z-[11] pointer-events-none"
+        className="absolute inset-0 bg-[#ff6a3d]/40 z-[11] pointer-events-none"
         style={{ mixBlendMode: 'normal' }}
       />
 
