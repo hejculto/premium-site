@@ -1,6 +1,7 @@
 import {
   Header,
   Hero,
+  TransitionSection,
   Services,
   WhyWorkWithMe,
   Portfolio,
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <TransitionSection />
         <Services />
         <WhyWorkWithMe />
         <Portfolio />

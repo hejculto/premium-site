@@ -1,5 +1,6 @@
 export { Header } from './Header'
 export { Hero } from './Hero'
+export { TransitionSection } from './TransitionSection'
 export { Services } from './Services'
 export { WhyWorkWithMe } from './WhyWorkWithMe'
 export { Portfolio } from './Portfolio'
