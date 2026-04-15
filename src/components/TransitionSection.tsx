@@ -19,7 +19,7 @@ export function TransitionSection() {
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
             Most businesses invest in websites that look good but fail to perform. I help brands turn their digital presence into a strategic asset — combining design, performance, and AI-driven systems to attract, convert, and scale.
           </p>
-          <p className="text-2xl md:text-3xl lg:text-4xl text-[#ff6a3d] italic font-bold mt-6 max-w-2xl mx-auto text-center">
+          <p className="text-xl md:text-2xl lg:text-3xl text-[#ff6a3d] italic font-bold mt-6 max-w-2xl mx-auto text-center">
             We are the right solution for small<br />and medium-sized businesses
           </p>
         </motion.div>
