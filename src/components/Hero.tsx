@@ -19,7 +19,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="text-white font-bold mb-8 leading-[0.9]"
             style={{ 
-              fontSize: 'clamp(2.5rem, 12vw, 9rem)',
+              fontSize: 'clamp(3.75rem, 18vw, 9rem)',
               letterSpacing: '-0.05em'
             }}
           >
