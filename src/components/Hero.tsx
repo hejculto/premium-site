@@ -5,8 +5,32 @@ import { hero } from '@/data/content'
 
 export function Hero() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[#FF6B35] pt-[15vh] pb-[15vh]">
-      <div className="container-premium relative z-10 px-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Capa 1: Video de fondo */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Capa 2: Overlay naranja */}
+      <div 
+        className="absolute inset-0 bg-[#ff6a3d] z-10"
+        style={{ mixBlendMode: 'multiply' }}
+      />
+      
+      {/* Fallback overlay naranja semitransparente */}
+      <div 
+        className="absolute inset-0 bg-[#ff6a3d]/70 z-[11] pointer-events-none"
+        style={{ mixBlendMode: 'normal' }}
+      />
+
+      {/* Capa 3: Contenido */}
+      <div className="container-premium relative z-20 px-6">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           initial={{ opacity: 0, y: 40 }}
@@ -39,7 +63,7 @@ export function Hero() {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
