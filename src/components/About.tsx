@@ -2,12 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
-const stats = [
-  { value: '18+', label: 'Years Experience' },
-  { value: 'Int', label: 'International Experience' },
-  { value: 'Multi', label: 'Multidisciplinary Approach' },
-]
+import { Globe, Layers } from 'lucide-react'
 
 function BackToTop() {
   const [show, setShow] = useState(false)
@@ -69,13 +64,19 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center sm:text-left">
-                <span className="text-4xl md:text-5xl font-bold text-[#ff6a3d]">{stat.value}</span>
-                <p className="text-sm text-neutral-500 mt-1 uppercase tracking-wide">{stat.label}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-3 gap-6 mb-10">
+            <div className="flex flex-col items-center text-center">
+              <span className="text-4xl md:text-5xl font-bold text-[#ff6a3d]">18+</span>
+              <p className="text-xs text-neutral-500 mt-2 uppercase tracking-wide">Years Experience</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <Globe size={40} strokeWidth={1.5} className="text-[#ff6a3d] mb-2" />
+              <p className="text-xs text-neutral-500 uppercase tracking-wide">International Experience</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <Layers size={40} strokeWidth={1.5} className="text-[#ff6a3d] mb-2" />
+              <p className="text-xs text-neutral-500 uppercase tracking-wide">Multidisciplinary</p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
