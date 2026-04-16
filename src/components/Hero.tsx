@@ -9,7 +9,7 @@ export function Hero() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
+      setIsMobile(window.innerWidth <= 1024)
     }
     checkMobile()
     window.addEventListener('resize', checkMobile)
@@ -18,7 +18,6 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Capa 1: Video de fondo */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
@@ -26,7 +25,6 @@ export function Hero() {
         loop
         playsInline
         preload="auto"
-        poster={isMobile ? '/video-mobile-poster.jpg' : '/video-desktop-poster.jpg'}
       >
         <source 
           src={isMobile ? '/hero-video-mobile.mp4' : '/hero-video.mp4'} 
@@ -34,19 +32,16 @@ export function Hero() {
         />
       </video>
 
-      {/* Capa 2: Overlay naranja */}
       <div 
         className="absolute inset-0 bg-[#ff6a3d] z-10"
         style={{ mixBlendMode: 'multiply' }}
       />
       
-      {/* Fallback overlay naranja semitransparente */}
       <div 
         className="absolute inset-0 bg-[#ff6a3d]/40 z-[11] pointer-events-none"
         style={{ mixBlendMode: 'normal' }}
       />
 
-      {/* Capa 3: Contenido */}
       <div className="container-premium relative z-20 px-6">
         <motion.div
           className="max-w-4xl mx-auto text-center"
