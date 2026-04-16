@@ -9,6 +9,38 @@ const stats = [
   { value: 'Multi', label: 'Multidisciplinary Approach' },
 ]
 
+function BackToTop() {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShow(window.scrollY > 500)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return (
+    <motion.button
+      onClick={scrollToTop}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: show ? 1 : 0, y: show ? 0 : 20 }}
+      transition={{ duration: 0.3 }}
+      className="px-4 py-3 border-2 border-white/30 text-white rounded-full hover:bg-[#ff6a3d] hover:border-[#ff6a3d] transition-all duration-300 flex items-center gap-2"
+      style={{ display: show ? 'flex' : 'none' }}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+      <span className="text-sm font-medium">Back to top</span>
+    </motion.button>
+  )
+}
+
 export function About() {
   return (
     <section id="about" className="py-24 md:py-32 lg:py-40 bg-[#0f0f0f]">
@@ -30,10 +62,10 @@ export function About() {
 
           <div className="space-y-6 mb-12">
             <p className="text-lg text-neutral-400 leading-relaxed">
-              With more than 18 years of experience, I help businesses build digital systems that do more than look good — they support growth, improve performance, and create real business value.
+              With more than <span className="text-[#ff6a3d] font-semibold">18 years of experience</span>, I help businesses build digital systems that do more than look good — they support growth, improve performance, and create real business value.
             </p>
             <p className="text-lg text-neutral-400 leading-relaxed">
-              My work combines strategy, design, ecommerce, and marketing, shaped by international experience and hands-on work with businesses in Denmark. I also collaborate with a trusted team of specialists, allowing me to support each client with the right mix of skills to reach their goals.
+              My work combines <span className="text-[#ff6a3d] font-semibold">strategy, design, ecommerce, and marketing</span>, shaped by <span className="text-[#ff6a3d] font-semibold">international experience and hands-on work with businesses in Denmark</span>. I also collaborate with a trusted team of specialists, allowing me to support each client with the right mix of skills to reach their goals.
             </p>
           </div>
 
@@ -46,7 +78,7 @@ export function About() {
             ))}
           </div>
 
-          <div className="flex justify-center sm:justify-start">
+          <div className="flex flex-wrap items-center gap-4">
             <a
               href="https://www.linkedin.com/in/cesarmaldo"
               target="_blank"
@@ -55,6 +87,7 @@ export function About() {
             >
               View LinkedIn profile
             </a>
+            <BackToTop />
           </div>
         </motion.div>
       </div>
@@ -62,34 +95,4 @@ export function About() {
   )
 }
 
-export function BackToTop() {
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShow(window.scrollY > 500)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  return (
-    <motion.button
-      onClick={scrollToTop}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: show ? 1 : 0, y: show ? 0 : 20 }}
-      transition={{ duration: 0.3 }}
-      className="fixed bottom-8 right-8 z-50 px-4 py-3 border-2 border-white/30 bg-[#0f0f0f] text-white rounded-full hover:bg-[#ff6a3d] hover:border-[#ff6a3d] transition-all duration-300 flex items-center gap-2"
-      style={{ display: show ? 'flex' : 'none' }}
-    >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 15l-6-6-6 6"/>
-      </svg>
-      <span className="text-sm font-medium">Back to top</span>
-    </motion.button>
-  )
-}
+export { BackToTop }

@@ -9,7 +9,6 @@ import {
   WhyWorkWithMe,
   AdvisoryPlans,
   About,
-  BackToTop,
   FinalCTA,
   Footer,
 } from '@/components'
@@ -31,7 +30,6 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
-      <BackToTop />
     </>
   )
 }
