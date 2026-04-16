@@ -1,14 +1,30 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { Globe, Layers } from 'lucide-react'
 
 const stats = [
   { value: '18+', label: 'Years Experience' },
-  { value: '∞', label: 'International Experience' },
-  { value: '∞', label: 'Multidisciplinary Approach' },
+  { value: '∞', label: 'International Experience', icon: Globe },
+  { value: '∞', label: 'Multidisciplinary Approach', icon: Layers },
 ]
 
 export function About() {
+  const [showBackToTop, setShowBackToTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 500)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <section id="about" className="py-24 md:py-32 lg:py-40 bg-[#0f0f0f]">
       <div className="container-premium px-6">
@@ -37,12 +53,20 @@ export function About() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center sm:text-left">
-                <span className="text-4xl md:text-5xl font-bold text-[#ff6a3d]">{stat.value}</span>
-                <p className="text-sm text-neutral-500 mt-1 uppercase tracking-wide">{stat.label}</p>
-              </div>
-            ))}
+            {stats.map((stat, i) => {
+              const Icon = stat.icon
+              return (
+                <div key={i} className="text-center sm:text-left">
+                  <div className="flex items-center gap-3 justify-center sm:justify-start mb-2">
+                    {Icon && (
+                      <Icon size={20} strokeWidth={1.5} className="text-[#ff6a3d]" />
+                    )}
+                    <span className="text-4xl md:text-5xl font-bold text-[#ff6a3d]">{stat.value}</span>
+                  </div>
+                  <p className="text-sm text-neutral-500 uppercase tracking-wide">{stat.label}</p>
+                </div>
+              )
+            })}
           </div>
 
           <div className="flex justify-center sm:justify-start">
@@ -57,6 +81,20 @@ export function About() {
           </div>
         </motion.div>
       </div>
+
+      <motion.button
+        onClick={scrollToTop}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: showBackToTop ? 1 : 0, y: showBackToTop ? 0 : 20 }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-8 right-8 z-50 px-4 py-3 border-2 border-white/30 text-white rounded-full hover:bg-[#ff6a3d] hover:border-[#ff6a3d] transition-all duration-300 flex items-center gap-2"
+        style={{ pointerEvents: showBackToTop ? 'auto' : 'none' }}
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+        <span className="text-sm font-medium">Back to top</span>
+      </motion.button>
     </section>
   )
 }
