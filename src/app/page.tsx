@@ -3,6 +3,7 @@ import {
   Hero,
   TransitionSection,
   QuizSection,
+  ServicesTransition,
   Services,
   WhyWorkWithMe,
   Portfolio,
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <TransitionSection />
         <QuizSection />
+        <ServicesTransition />
         <Services />
         <WhyWorkWithMe />
         <Portfolio />
