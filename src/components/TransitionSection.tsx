@@ -54,7 +54,7 @@ export function TransitionSection() {
                   transition={{ duration: 0.6, ease: 'easeInOut' }}
                 >
                   <Icon
-                    size={28}
+                    size={34}
                     strokeWidth={1.5}
                     className={`transition-colors duration-500 ${
                       isActive ? 'text-[#ff6a3d]' : 'text-black'
