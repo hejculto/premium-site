@@ -66,7 +66,7 @@ export function QuizSection() {
   }
 
   return (
-    <section className="py-24 md:py-32 bg-card/50">
+    <section className="py-24 md:py-32 bg-[#ff6a3d]">
       <div className="container-premium px-6">
         <div className="max-w-3xl mx-auto">
           <AnimatePresence mode="wait">
@@ -78,10 +78,10 @@ export function QuizSection() {
                 transition={{ duration: 0.5 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
                   Find the right digital solution for your business
                 </h2>
-                <p className="text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
                   In less than a minute, discover whether you need a new website, better conversion, stronger acquisition, or smarter systems to grow.
                 </p>
                 <button
