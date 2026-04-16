@@ -4,9 +4,9 @@ import {
   TransitionSection,
   QuizSection,
   ServicesTransition,
+  Portfolio,
   Services,
   WhyWorkWithMe,
-  Portfolio,
   AdvisoryPlans,
   About,
   FinalCTA,
@@ -22,9 +22,9 @@ export default function Home() {
         <TransitionSection />
         <QuizSection />
         <ServicesTransition />
+        <Portfolio />
         <Services />
         <WhyWorkWithMe />
-        <Portfolio />
         <AdvisoryPlans />
         <About />
         <FinalCTA />
