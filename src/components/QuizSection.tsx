@@ -200,7 +200,7 @@ export function QuizSection() {
                 </div>
                 <h3 className="text-3xl font-bold text-black mb-4">Thank you!</h3>
                 <p className="text-lg text-neutral-600">
-                  We'll send your personalized recommendation to {email}
+                  We&apos;ll send your personalized recommendation to {email}
                 </p>
               </motion.div>
             )}
