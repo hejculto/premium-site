@@ -23,15 +23,15 @@ export function About() {
             About
           </span>
           
-          <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-8">
             Your partner in digital growth
           </h2>
 
           <div className="space-y-6 mb-12">
-            <p className="text-xl sm:text-2xl md:text-lg text-neutral-400 leading-relaxed">
+            <p className="text-lg text-neutral-400 leading-relaxed">
               With more than 18 years of experience, I help businesses build digital systems that do more than look good — they support growth, improve performance, and create real business value.
             </p>
-            <p className="text-xl sm:text-2xl md:text-lg text-neutral-400 leading-relaxed">
+            <p className="text-lg text-neutral-400 leading-relaxed">
               My work combines strategy, design, ecommerce, and marketing, shaped by international experience and hands-on work with businesses in Denmark. I also collaborate with a trusted team of specialists, allowing me to support each client with the right mix of skills to reach their goals.
             </p>
           </div>
@@ -39,8 +39,8 @@ export function About() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
             {stats.map((stat, i) => (
               <div key={i} className="text-center sm:text-left">
-                <span className="text-5xl sm:text-6xl md:text-5xl font-bold text-[#ff6a3d]">{stat.value}</span>
-                <p className="text-base sm:text-lg md:text-sm text-neutral-500 mt-2 uppercase tracking-wide">{stat.label}</p>
+                <span className="text-4xl md:text-5xl font-bold text-[#ff6a3d]">{stat.value}</span>
+                <p className="text-sm text-neutral-500 mt-1 uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
