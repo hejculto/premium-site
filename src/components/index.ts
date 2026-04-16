@@ -1,6 +1,7 @@
 export { Header } from './Header'
 export { Hero } from './Hero'
 export { TransitionSection } from './TransitionSection'
+export { QuizSection } from './QuizSection'
 export { Services } from './Services'
 export { WhyWorkWithMe } from './WhyWorkWithMe'
 export { Portfolio } from './Portfolio'

@@ -2,6 +2,7 @@ import {
   Header,
   Hero,
   TransitionSection,
+  QuizSection,
   Services,
   WhyWorkWithMe,
   Portfolio,
@@ -18,6 +19,7 @@ export default function Home() {
       <main>
         <Hero />
         <TransitionSection />
+        <QuizSection />
         <Services />
         <WhyWorkWithMe />
         <Portfolio />
