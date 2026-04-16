@@ -1,9 +1,21 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { hero } from '@/data/content'
 
 export function Hero() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Capa 1: Video de fondo */}
@@ -13,8 +25,13 @@ export function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster={isMobile ? '/video-mobile-poster.jpg' : '/video-desktop-poster.jpg'}
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source 
+          src={isMobile ? '/hero-video-mobile.mp4' : '/hero-video.mp4'} 
+          type="video/mp4" 
+        />
       </video>
 
       {/* Capa 2: Overlay naranja */}
