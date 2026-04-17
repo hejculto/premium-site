@@ -5,11 +5,31 @@ import { motion } from 'framer-motion'
 import { Globe, ShoppingCart, TrendingUp, Cpu, Lightbulb } from 'lucide-react'
 
 const services = [
-  { icon: Globe, label: 'Web Design' },
-  { icon: ShoppingCart, label: 'Ecommerce' },
-  { icon: TrendingUp, label: 'Ads & Growth' },
-  { icon: Cpu, label: 'AI Systems' },
-  { icon: Lightbulb, label: 'Strategy' },
+  { 
+    icon: Globe, 
+    title: 'Understand', 
+    description: 'I start by understanding your business, your goals, and where the real opportunities are.' 
+  },
+  { 
+    icon: ShoppingCart, 
+    title: 'Build', 
+    description: 'We design and build the right solution — whether it\'s your brand, website or ecommerce.' 
+  },
+  { 
+    icon: TrendingUp, 
+    title: 'Grow', 
+    description: 'We optimize and improve performance to help you attract, convert and scale.' 
+  },
+  { 
+    icon: Cpu, 
+    title: 'Systems', 
+    description: 'I implement tools and AI to automate, simplify and make your business more efficient.' 
+  },
+  { 
+    icon: Lightbulb, 
+    title: 'Think long-term', 
+    description: 'Everything is built with a clear strategy — not just for today, but for long-term growth.' 
+  },
 ]
 
 export function TransitionSection() {
@@ -33,10 +53,10 @@ export function TransitionSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black transition-colors duration-500 hover:text-[#ff6a3d] mb-8 leading-tight">
-            A website is not the goal — growth is.
+            How I help you grow
           </h2>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-12">
-            Most businesses invest in websites that look good but fail to perform. I help brands turn their digital presence into a strategic asset — combining design, performance, and AI-driven systems to attract, convert, and scale.
+            A simple, practical approach to building and scaling your digital presence — from idea to execution.
           </p>
 
           <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
@@ -45,7 +65,7 @@ export function TransitionSection() {
               const isActive = index === activeIndex
               return (
                 <motion.div
-                  key={service.label}
+                  key={service.title}
                   className="relative flex flex-col items-center"
                   initial={{ opacity: 0.4 }}
                   animate={{ 
@@ -56,10 +76,18 @@ export function TransitionSection() {
                   <Icon
                     size={34}
                     strokeWidth={1.5}
-                    className={`transition-colors duration-500 ${
+                    className={`transition-colors duration-500 mb-2 ${
                       isActive ? 'text-[#ff6a3d]' : 'text-black'
                     }`}
                   />
+                  <span className={`text-xs font-semibold transition-colors duration-500 ${
+                    isActive ? 'text-[#ff6a3d]' : 'text-black'
+                  }`}>
+                    {service.title}
+                  </span>
+                  <p className="text-[10px] text-neutral-500 max-w-[100px] mt-1">
+                    {service.description}
+                  </p>
                 </motion.div>
               )
             })}
