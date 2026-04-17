@@ -25,7 +25,7 @@ export function WhyWorkWithMe() {
               At arbejde med flere agencies betyder koordinering, fejlvisioner og udvandet ansvar. Jeg samler det hele ét sted — kreativ retning, teknisk eksekvering og strategisk tænkning.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Ingen overleveringer, ingen 'lad mig spørge teamet', ingen 48-timers emailsvar. Kun direkte adgang til én der forstår dit brand, dine mål og hvordan du når dem.
+              Ingen overleveringer, ingen lad mig spørge teamet, ingen 48-timers emailsvar. Kun direkte adgang til én der forstår dit brand, dine mål og hvordan du når dem.
             </p>
           </motion.div>
 
