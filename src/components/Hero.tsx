@@ -81,7 +81,7 @@ export function Hero() {
             }}
             className="inline-block px-8 py-3 text-white border-2 border-white rounded-full text-sm font-medium tracking-wide hover:bg-white/10 transition-colors"
           >
-            Let me introduce myself.
+            Lær mig at kende
           </motion.a>
         </motion.div>
       </div>
