@@ -6,7 +6,6 @@ import {
   ServicesTransition,
   Portfolio,
   Services,
-  WhyWorkWithMe,
   AdvisoryPlans,
   About,
   FinalCTA,
@@ -24,7 +23,6 @@ export default function Home() {
         <ServicesTransition />
         <Portfolio />
         <Services />
-        <WhyWorkWithMe />
         <AdvisoryPlans />
         <About />
         <FinalCTA />
