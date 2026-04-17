@@ -57,7 +57,7 @@ export function AdvisoryPlans() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#ff6a3d]/30 flex flex-col"
+            className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#ff6a3d]/30 flex flex-col justify-start"
           >
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#ff6a3d] mb-2 block">
               FØRSTE SKRIDT
@@ -65,7 +65,7 @@ export function AdvisoryPlans() {
             <h3 className="text-lg font-semibold text-white mb-2">
               Strategisk analyse
             </h3>
-            <p className="text-neutral-500 text-sm mb-3 flex-grow">
+            <p className="text-neutral-500 text-sm mb-3">
               Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.
             </p>
             <ul className="space-y-2 mb-4">
@@ -76,7 +76,7 @@ export function AdvisoryPlans() {
                 </li>
               ))}
             </ul>
-            <div className="mt-auto">
+            <div className="mt-4">
               <div className="text-3xl font-bold text-[#ff6a3d] mb-1">0 DKK</div>
               <p className="text-xs text-neutral-500 mb-3">Engangsydelse</p>
               <motion.button
