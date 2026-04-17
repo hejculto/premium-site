@@ -100,10 +100,10 @@ export const portfolio = [
   {
     id: 3,
     title: 'Artisan Coffee Co.',
-    category: 'Photography & Video',
-    description: 'Brand content campaign including product photography, lifestyle shots, and social reels.',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80',
-    tags: ['Photography', 'Video', 'Social Media'],
+    category: 'Performance & Strategy',
+    description: 'Led a complete e-commerce transformation for a Denmark-based brand, combining webshop optimization with a targeted advertising strategy. The result was a +100% increase in revenue, driven by improved conversion rates, stronger customer acquisition, and a scalable growth framework.',
+    image: '/exp3.png',
+    tags: ['E-commerce Optimization', 'Paid Advertising', 'Conversion Strategy'],
   },
   {
     id: 4,
