@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 const questions = [
   {
     id: 'q1',
-    question: 'What do you need right now?',
-    options: ['New website', 'Improve existing website', 'More sales / leads', 'AI & automation', 'Not sure'],
+    question: 'What would you like to improve right now?',
+    options: ['Build a new website', 'Improve my current website', 'Get more customers', 'Use AI and automation', 'I\'m not sure yet'],
   },
   {
     id: 'q2',
@@ -79,16 +79,16 @@ export function QuizSection() {
                 className="text-center"
               >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                  Find the right digital solution for your business
+                  Not sure what your business needs to grow?
                 </h2>
                 <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                  In less than a minute, discover whether you need a new website, better conversion, stronger acquisition, or smarter systems to grow.
+                  In less than a minute, get a clear direction on what to focus on next — from your website to marketing, ecommerce or AI.
                 </p>
                 <button
                   onClick={() => setShowQuiz(true)}
                   className="px-10 py-4 text-lg border-2 border-[#ff6a3d] text-[#ff6a3d] rounded-full hover:bg-[#ff6a3d] hover:text-white transition-colors"
                 >
-                  Discover what you need
+                  Get your free plan
                 </button>
               </motion.div>
             ) : !submitted ? (
