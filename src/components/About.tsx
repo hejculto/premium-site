@@ -56,26 +56,26 @@ export function About() {
           </h2>
 
           <div className="space-y-6 mb-12">
-            <p className="text-lg text-neutral-400 leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-neutral-400 leading-relaxed">
               With more than <span className="text-[#ff6a3d] font-semibold">18 years of experience</span>, I help businesses build digital systems that do more than look good — they support growth, improve performance, and create real business value.
             </p>
-            <p className="text-lg text-neutral-400 leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-neutral-400 leading-relaxed">
               My work combines <span className="text-[#ff6a3d] font-semibold">strategy, design, ecommerce, and marketing</span>, shaped by <span className="text-[#ff6a3d] font-semibold">international experience and hands-on work with businesses in Denmark</span>. I also collaborate with a trusted team of specialists, allowing me to support each client with the right mix of skills to reach their goals.
             </p>
           </div>
 
           <div className="grid grid-cols-3 gap-6 mb-10">
             <div className="flex flex-col items-center text-center">
-              <span className="text-4xl md:text-5xl font-bold text-[#ff6a3d]">18+</span>
-              <p className="text-xs text-neutral-500 mt-2 uppercase tracking-wide">Years Experience</p>
+              <span className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#ff6a3d]">18+</span>
+              <p className="text-sm md:text-base lg:text-lg text-neutral-400 mt-2 uppercase tracking-wide">Years Experience</p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Globe size={40} strokeWidth={1.5} className="text-[#ff6a3d] mb-2" />
-              <p className="text-xs text-neutral-500 uppercase tracking-wide">International Experience</p>
+              <Globe size={48} strokeWidth={1.5} className="text-[#ff6a3d] mb-2" />
+              <p className="text-sm md:text-base lg:text-lg text-neutral-400 uppercase tracking-wide">International Experience</p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Layers size={40} strokeWidth={1.5} className="text-[#ff6a3d] mb-2" />
-              <p className="text-xs text-neutral-500 uppercase tracking-wide">Multidisciplinary</p>
+              <Layers size={48} strokeWidth={1.5} className="text-[#ff6a3d] mb-2" />
+              <p className="text-sm md:text-base lg:text-lg text-neutral-400 uppercase tracking-wide">Multidisciplinary</p>
             </div>
           </div>
 
