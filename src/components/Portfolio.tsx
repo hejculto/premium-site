@@ -89,7 +89,7 @@ export function Portfolio() {
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt="Brand identity and strategy project for tech startup"
                     fill
                     className="object-cover"
                   />

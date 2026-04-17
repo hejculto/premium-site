@@ -108,10 +108,10 @@ export const portfolio = [
   {
     id: 4,
     title: 'Tech Startup Launch',
-    category: 'Full-Service',
-    description: 'Launch campaign with landing page, Meta ads, and AI-powered customer service setup.',
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
-    tags: ['Advertising', 'AI Consulting', 'Web'],
+    category: 'New Brand',
+    description: 'The goal was to position the brand as a professional yet accessible player in the market. To achieve this, we led a complete brand refresh supported by in-depth market research. This resulted in a refined visual identity built on clean, sober colors, giving the brand a stronger and more confident presence.',
+    image: '/exp4.png',
+    tags: ['Brand Identity', 'Brand Strategy'],
   },
 ]
 
