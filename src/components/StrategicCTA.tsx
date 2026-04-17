@@ -42,7 +42,7 @@ export function StrategicCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-white/60 mb-4"
+            className="text-[10px] sm:text-xs font-bold font-mono uppercase tracking-widest text-white/80 mb-4"
           >
             First Step
           </motion.p>
@@ -54,7 +54,7 @@ export function StrategicCTA() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
           >
-            <span className="text-[#ff6a3d]">0 DKK</span> — Strategic Analysis
+            <span className="text-[#ff6a3d]">0 DKK</span> — Get a clear plan for your business
           </motion.h2>
 
           <motion.p
@@ -62,9 +62,9 @@ export function StrategicCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base text-white/70 mb-8 max-w-lg mx-auto"
+            className="text-base sm:text-lg text-white/70 mb-8 max-w-lg mx-auto leading-relaxed"
           >
-            Get a clear, expert breakdown of your current setup and where you&apos;re losing opportunities.
+            I’ll review your current setup and show you exactly where you’re losing opportunities — and what to fix first.
           </motion.p>
 
           <motion.button
