@@ -57,38 +57,38 @@ export function AdvisoryPlans() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#ff6a3d]/30 flex flex-col justify-start"
+            className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#ff6a3d]/30 flex flex-col justify-between"
           >
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#ff6a3d] mb-2 block">
-              FØRSTE SKRIDT
-            </span>
-            <h3 className="text-lg font-semibold text-white mb-2">
-              Strategisk analyse
-            </h3>
-            <p className="text-neutral-500 text-sm mb-3">
-              Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.
-            </p>
-            <ul className="space-y-2 mb-4">
-              {strategicAnalysis.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
-                  <span className="text-xs text-neutral-400">{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-4">
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#ff6a3d] mb-2 block">
+                FØRSTE SKRIDT
+              </span>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                Strategisk analyse
+              </h3>
+              <p className="text-neutral-500 text-sm mb-3">
+                Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.
+              </p>
+              <ul className="space-y-2 mb-4">
+                {strategicAnalysis.features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-neutral-400">{feature}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="text-3xl font-bold text-[#ff6a3d] mb-1">0 DKK</div>
-              <p className="text-xs text-neutral-500 mb-3">Engangsydelse</p>
-              <motion.button
-                onClick={scrollToContact}
-                className="w-full px-5 py-3 bg-[#ff6a3d] text-white font-medium rounded-xl hover:bg-[#ff6a3d]/90 transition-colors flex items-center justify-center gap-2 text-sm"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {strategicAnalysis.cta}
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
+              <p className="text-xs text-neutral-500 mb-4">Engangsydelse</p>
             </div>
+            <motion.button
+              onClick={scrollToContact}
+              className="w-full px-5 py-3 bg-[#ff6a3d] text-white font-medium rounded-xl hover:bg-[#ff6a3d]/90 transition-colors flex items-center justify-center gap-2 text-sm"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {strategicAnalysis.cta}
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
           </motion.div>
 
           {/* Paid plans */}
@@ -104,7 +104,7 @@ export function AdvisoryPlans() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               className={cn(
-                'relative rounded-2xl p-6 flex flex-col',
+                'relative rounded-2xl p-6 flex flex-col justify-between',
                 plan.highlighted
                   ? 'bg-[#0f0f0f] border-2 border-[#ff6a3d]'
                   : 'bg-[#0f0f0f]/50 border border-foreground/5'
@@ -118,32 +118,32 @@ export function AdvisoryPlans() {
                 </div>
               )}
 
-              <div className="mb-4">
+              <div>
                 <h3 className="text-lg font-semibold text-white mb-1">{plan.name}</h3>
-                <p className="text-neutral-500 text-xs mb-4">{plan.description}</p>
-                <div className="flex items-baseline gap-1">
+                <p className="text-neutral-500 text-xs mb-3">{plan.description}</p>
+                <div className="flex items-baseline gap-1 mb-3">
                   <span className="text-3xl font-bold text-white">
                     {formatCurrency(plan.price)}
                   </span>
                   <span className="text-neutral-500 text-sm">/ {plan.period}</span>
                 </div>
-              </div>
 
-              <ul className="space-y-2 mb-6 flex-grow">
-                {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
-                    <span className="text-xs text-neutral-400 leading-relaxed">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-2 mb-4">
+                  {plan.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
+                      <span className="text-xs text-neutral-400 leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <motion.button
                 onClick={scrollToContact}
                 className={cn(
-                  'w-full group flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all text-sm mt-auto',
+                  'w-full group flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all text-sm',
                   plan.highlighted
                     ? 'bg-[#ff6a3d] text-white hover:bg-[#ff6a3d]/90'
                     : 'bg-white/5 hover:bg-white/10 text-white'
