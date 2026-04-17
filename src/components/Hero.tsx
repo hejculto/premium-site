@@ -1,35 +1,33 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { hero } from '@/data/content'
 
 export function Hero() {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1024)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Desktop video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
       >
-        <source 
-          src={isMobile ? '/hero-video-mobile.mp4' : '/hero-video.mp4'} 
-          type="video/mp4" 
-        />
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Mobile video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover block md:hidden"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src="/hero-video-mobile.mp4" type="video/mp4" />
       </video>
 
       <div 
