@@ -42,16 +42,34 @@ export function Portfolio() {
                 ease: [0.22, 1, 0.36, 1]
               }}
               className="group cursor-pointer"
-              onClick={() => setSelectedProject(project)}
+              onClick={() => i === 0 ? null : setSelectedProject(project)}
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {i === 0 ? (
+                <a 
+                  href="https://www.youtube.com/watch?v=l3_M9iCL2GU&t=19s" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                    <Image
+                      src={project.image}
+                      alt="Promedon brand and website project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </a>
+              ) : (
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <span className="text-xs font-mono uppercase tracking-wider text-accent mb-2 block">
                 {project.category}
               </span>

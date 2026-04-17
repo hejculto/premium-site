@@ -83,11 +83,11 @@ export const whyWork = [
 export const portfolio = [
   {
     id: 1,
-    title: 'Nordic Wellness Rebrand',
+    title: 'Promedon Brand & Web Experience',
     category: 'Branding & Web',
-    description: 'Complete brand identity and e-commerce platform for wellness brand expansion.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
-    tags: ['Shopify', 'Brand Identity', 'Photography'],
+    description: 'Promedon is an international medical technology company for which we developed the brand conceptualization and overall visual identity. Additionally, we designed and built a new website with support for three languages, country-specific legal considerations, and dedicated sections for each of its medical specialties.',
+    image: '/exp1.png',
+    tags: ['Brand Identity', 'Web Design', 'Advertising'],
   },
   {
     id: 2,
