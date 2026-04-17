@@ -150,6 +150,30 @@ export const advisoryPlans = [
   },
 ]
 
+export const whyWork = [
+  {
+    id: 'multidisciplinary',
+    title: 'Én strategisk partner',
+    description: 'Slip for koordinering. Fra koncept til eksekvering håndterer én kreativ partner din vision.',
+    stat: '6+',
+    statLabel: 'Discipliner',
+  },
+  {
+    id: 'technical',
+    title: 'Kreativ + Teknisk',
+    description: 'Design møder engineering. Hvert resultat er både smukt og bygget til at performe.',
+    stat: '100%',
+    statLabel: 'In-house',
+  },
+  {
+    id: 'performance',
+    title: 'Fokus på resultater',
+    description: 'Smukt arbejde betyder noget, men ROI betyder mere. Hvert projekt er bundet til klare mål.',
+    stat: '3x',
+    statLabel: 'Gennemsnitlig ROI',
+  },
+]
+
 export const about = {
   headline: 'Din partner i\ndigital excellence',
   body: [

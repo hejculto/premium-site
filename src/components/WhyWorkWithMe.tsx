@@ -15,20 +15,17 @@ export function WhyWorkWithMe() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="text-xs font-mono uppercase tracking-wider text-accent mb-4 block">
-              Why Work Together
+              HVORFOR ARBEJDE MED MIG
             </span>
             <h2 className="heading-section mb-6">
-              Skip the agency,<br />
-              <span className="text-gradient">keep the expertise</span>
+              Slip for agency,<br />
+              <span className="text-gradient">bevar ekspertisen</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Working with multiple agencies means coordination overhead, misaligned visions, 
-              and diluted accountability. I bring everything under one roof — creative direction, 
-              technical execution, and strategic thinking — to deliver cohesive results.
+              At arbejde med flere agencies betyder koordinering, fejlvisioner og udvandet ansvar. Jeg samler det hele ét sted — kreativ retning, teknisk eksekvering og strategisk tænkning.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              No hand-offs, no &ldquo;let me check with the team,&rdquo; no 48-hour email delays. 
-              Just direct access to someone who understands your brand, your goals, and how to achieve them.
+              Ingen overleveringer, ingen "lad mig spørge teamet", ingen 48-timers emailsvar. Kun direkte adgang til én der forstår dit brand, dine mål og hvordan du når dem.
             </p>
           </motion.div>
 
