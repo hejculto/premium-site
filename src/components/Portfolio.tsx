@@ -42,7 +42,7 @@ export function Portfolio() {
                 ease: [0.22, 1, 0.36, 1]
               }}
               className="group cursor-pointer"
-              onClick={() => i < 2 ? null : setSelectedProject(project)}
+              onClick={() => i < 3 ? null : setSelectedProject(project)}
             >
               {i === 0 ? (
                 <a 
@@ -86,14 +86,22 @@ export function Portfolio() {
                   />
                 </div>
               ) : (
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
-                  <Image
-                    src={project.image}
-                    alt="Brand identity and strategy project for tech startup"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <a 
+                  href="https://www.youtube.com/watch?v=yayTFb0dJFw&t=2s" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="View product launch video case study"
+                  className="block"
+                >
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                    <Image
+                      src={project.image}
+                      alt="Brand identity and strategy project for tech startup"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </a>
               )}
               <span className="text-xs font-mono uppercase tracking-wider text-accent mb-2 block">
                 {project.category}
