@@ -5,9 +5,9 @@ import {
   QuizSection,
   ServicesTransition,
   Portfolio,
+  About,
   Services,
   AdvisoryPlans,
-  About,
   FinalCTA,
   Footer,
 } from '@/components'
@@ -22,9 +22,9 @@ export default function Home() {
         <QuizSection />
         <ServicesTransition />
         <Portfolio />
+        <About />
         <Services />
         <AdvisoryPlans />
-        <About />
         <FinalCTA />
       </main>
       <Footer />
