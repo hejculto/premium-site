@@ -91,11 +91,11 @@ export const portfolio = [
   },
   {
     id: 2,
-    title: 'Copenhagen Architecture',
-    category: 'Web Development',
-    description: 'Minimalist portfolio site with 3D project visualization and seamless CMS integration.',
-    image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80',
-    tags: ['Web Design', 'Next.js', 'CMS'],
+    title: 'Rikke Molge Jewelry E-commerce',
+    category: 'E-Commerce',
+    description: 'End-to-end e-commerce project for a Denmark-based jewelry brand. We developed both the brand identity and the online store, targeting local and international markets, with a strong focus on visual storytelling and conversion-driven design.',
+    image: '/exp2.png',
+    tags: ['Brand Identity', 'E-commerce', 'Shopify'],
   },
   {
     id: 3,

@@ -42,7 +42,7 @@ export function Portfolio() {
                 ease: [0.22, 1, 0.36, 1]
               }}
               className="group cursor-pointer"
-              onClick={() => i === 0 ? null : setSelectedProject(project)}
+              onClick={() => i === 0 || i === 1 ? null : setSelectedProject(project)}
             >
               {i === 0 ? (
                 <a 
@@ -55,6 +55,22 @@ export function Portfolio() {
                     <Image
                       src={project.image}
                       alt="Promedon brand and website project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </a>
+              ) : i === 1 ? (
+                <a 
+                  href="https://rikkemolge.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                    <Image
+                      src={project.image}
+                      alt="Rikke Molge jewelry e-commerce project"
                       fill
                       className="object-cover"
                     />
