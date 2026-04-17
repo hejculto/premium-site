@@ -10,8 +10,8 @@ export const navigation = {
 }
 
 export const hero = {
-  headline: 'Vil du vækste dit brand eller din webshop?\nLad os bygge noget, der rent faktisk virker.',
-  subheadline: 'Jeg hjælper brands med at vokse gennem strategi, design, e-handel og AI — og omsætter idéer til klare, effektive og skalerbare digitale løsninger.',
+  headline: 'Vil du vækste dit brand eller din webshop?',
+  subheadline: 'Jeg hjælper dig med at bygge noget, der rent faktisk virker — gennem strategi, design, e-handel og AI.',
   primaryCta: { label: 'Book a Call', href: '#contact' },
   secondaryCta: { label: 'View Services', href: '#services' },
   badge: 'Available for Q3 2026',
