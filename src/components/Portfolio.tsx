@@ -21,11 +21,11 @@ export function Portfolio() {
           className="max-w-2xl mb-16"
         >
           <span className="text-xs font-mono uppercase tracking-wider text-accent mb-4 block">
-            Selected Work
+            UDVALGTE PROJEKTER
           </span>
           <h2 className="heading-section">
-            Projects that{' '}
-            <span className="text-gradient">deliver results</span>
+            Projekter, der{' '}
+            <span className="text-gradient">skaber resultater</span>
           </h2>
         </motion.div>
 

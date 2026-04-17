@@ -7,15 +7,15 @@ import { formatCurrency, cn } from '@/lib/utils'
 
 const strategicAnalysis = {
   id: 'analysis',
-  name: '0 DKK — Strategic Analysis',
-  description: 'Get a clear, expert breakdown of your current setup and where you\'re losing opportunities.',
+  name: 'Strategisk analyse',
+  description: 'Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.',
   features: [
-    'Website & conversion analysis',
-    'Strategy & positioning review',
-    'Advertising performance insights',
-    'AI opportunities & automation gaps',
+    'Hjemmeside & konverteringsanalyse',
+    'Strategi & positionering',
+    'Annoncering performance',
+    'AI muligheder & automatisering',
   ],
-  cta: 'Request Analysis',
+  cta: 'Få din analyse',
 }
 
 export function AdvisoryPlans() {
@@ -37,15 +37,15 @@ export function AdvisoryPlans() {
           className="max-w-2xl mb-16"
         >
           <span className="text-xs font-mono uppercase tracking-wider text-accent mb-4 block">
-            Advisory Plans
+            SAMARBEJDE
           </span>
           <h2 className="heading-section">
-            Strategic partnership,
+            Strategisk samarbejde,
             <br />
-            <span className="text-gradient">measurable results</span>
+            <span className="text-gradient">målbare resultater</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-6 leading-relaxed">
-            Choose the engagement that fits your needs. Each plan includes direct access, strategic thinking, and a commitment to your success.
+            Vælg det samarbejde, der passer til dine behov. Alle løsninger inkluderer direkte adgang, strategisk sparring og fokus på vækst.
           </p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function AdvisoryPlans() {
             className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#ff6a3d]/30 flex flex-col"
           >
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#ff6a3d] mb-2 block">
-              First Step
+              FØRSTE SKRIDT
             </span>
             <h3 className="text-lg font-semibold text-white mb-2">
               Strategic Analysis

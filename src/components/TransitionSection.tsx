@@ -33,7 +33,7 @@ export function TransitionSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black transition-colors duration-500 hover:text-[#ff6a3d] mb-8 leading-tight">
-            How I help you grow
+            Sådan hjælper jeg dig med at vækste
           </h2>
           <p className="text-xl md:text-2xl text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-12">
             Jeg hjælper dig med at forstå din forretning, opbygge det rigtige digitale fundament og skabe vækst gennem strategi, design, e-handel og AI — og samle det hele i et system, der rent faktisk virker.

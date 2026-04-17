@@ -20,7 +20,7 @@ export function ServicesTransition() {
       <div className="container-premium px-6">
         <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-6 md:gap-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white">
-            We build
+            Vi bygger
           </h2>
           <div className="h-12 md:h-16 lg:h-20 flex items-center justify-center md:justify-start">
             <AnimatePresence mode="wait">

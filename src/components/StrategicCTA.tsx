@@ -42,9 +42,9 @@ export function StrategicCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[10px] sm:text-xs font-bold font-mono uppercase tracking-widest text-white/80 mb-4"
+className="text-[10px] sm:text-xs font-bold font-mono uppercase tracking-widest text-white/80 mb-4"
           >
-            First Step
+            FØRSTE SKRIDT
           </motion.p>
 
           <motion.h2
@@ -54,7 +54,7 @@ export function StrategicCTA() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
           >
-            <span className="text-[#ff6a3d]">0 DKK</span> — Get a clear plan for your business
+            <span className="text-[#ff6a3d]">0 DKK</span> — Få en klar plan for din virksomhed
           </motion.h2>
 
           <motion.p
@@ -64,7 +64,7 @@ export function StrategicCTA() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-white/70 mb-8 max-w-lg mx-auto leading-relaxed"
           >
-            I’ll review your current setup and show you exactly where you’re losing opportunities — and what to fix first.
+            Jeg gennemgår din nuværende opsætning og viser dig præcis, hvor du mister muligheder — og hvad du bør gøre først.
           </motion.p>
 
           <motion.button
@@ -77,7 +77,7 @@ export function StrategicCTA() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Request Analysis
+            Få din analyse
             <ArrowRight className="w-4 h-4" />
           </motion.button>
         </motion.div>

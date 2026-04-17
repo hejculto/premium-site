@@ -6,28 +6,28 @@ import { motion, AnimatePresence } from 'framer-motion'
 const questions = [
   {
     id: 'q1',
-    question: 'What would you like to improve right now?',
-    options: ['Build a new website', 'Improve my current website', 'Get more customers', 'Use AI and automation', 'I\'m not sure yet'],
+    question: 'Hvad vil du gerne forbedre lige nu?',
+    options: ['Ny hjemmeside', 'Forbedre min nuværende hjemmeside', 'Få flere kunder', 'Bruge AI og automatisering', 'Jeg er ikke sikker endnu'],
   },
   {
     id: 'q2',
-    question: 'Main goal?',
-    options: ['More sales', 'More leads', 'Better conversion', 'Stronger brand', 'Save time'],
+    question: 'Hvad er dit primære mål?',
+    options: ['Flere salg', 'Flere leads', 'Bedre konvertering', 'Stærkere brand', 'Spar tid'],
   },
   {
     id: 'q3',
-    question: "What's the biggest problem?",
-    options: ['Low traffic', 'Poor conversion', 'Outdated design', 'No clear strategy'],
+    question: 'Hvad er den største udfordring?',
+    options: ['Lav trafik', 'Dårlig konvertering', 'Forældet design', 'Ingen klar strategi'],
   },
   {
     id: 'q4',
-    question: 'When do you want to start?',
-    options: ['Just exploring', 'Soon', 'This month'],
+    question: 'Hvornår vil du starte?',
+    options: ['Kun undersøger', 'Snart', 'Denne måned'],
   },
   {
     id: 'q5',
-    question: 'Type of support?',
-    options: ['One-time project', 'Ongoing support', 'Full strategy', 'Not sure'],
+    question: 'Hvilken type støtte har du brug for?',
+    options: ['Éngangsprojekt', 'Løbende support', 'Fuld strategi', 'Ikke sikker'],
   },
 ]
 
@@ -79,16 +79,16 @@ export function QuizSection() {
                 className="text-center"
               >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
-                  Not sure what your business needs to grow?
+                  Er du i tvivl om, hvad din virksomhed har brug for?
                 </h2>
                 <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                  In less than a minute, get a clear direction on what to focus on next — from your website to marketing, ecommerce or AI.
+                  På under ét minut får du en klar retning for, hvad du bør fokusere på — fra din hjemmeside til marketing, e-handel eller AI.
                 </p>
                 <button
                   onClick={() => setShowQuiz(true)}
                   className="px-10 py-4 text-lg border-2 border-[#ff6a3d] text-[#ff6a3d] rounded-full hover:bg-[#ff6a3d] hover:text-white transition-colors"
                 >
-                  Get your free plan
+                  Få din gratis plan
                 </button>
               </motion.div>
             ) : !submitted ? (
@@ -109,7 +109,7 @@ export function QuizSection() {
                   }}
                   className="text-neutral-500 hover:text-neutral-700 mb-8 inline-block"
                 >
-                  ← Back
+                  ← Tilbage
                 </button>
 
                 <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
@@ -156,19 +156,19 @@ export function QuizSection() {
                           onClick={nextStep}
                           className="px-10 py-4 text-lg border-2 border-[#ff6a3d] text-[#ff6a3d] rounded-full hover:bg-[#ff6a3d] hover:text-white transition-colors"
                         >
-                          {currentStep === questions.length - 1 ? 'Continue' : 'Next'}
+                          {currentStep === questions.length - 1 ? 'Fortsæt' : 'Næste'}
                         </button>
                       </div>
                     </>
                   ) : (
                     <>
                       <h3 className="text-2xl md:text-3xl font-bold text-black mb-8 text-center">
-                        Enter your email to get your personalized recommendation
+                        Indtast din email for at modtage din anbefaling
                       </h3>
                       <div className="max-w-md mx-auto">
                         <input
                           type="email"
-                          placeholder="your@email.com"
+                          placeholder="din@email.dk"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           className="w-full px-6 py-4 text-lg border-2 border-neutral-200 rounded-full focus:border-[#ff6a3d] focus:outline-none mb-6"
@@ -198,9 +198,9 @@ export function QuizSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-black mb-4">Thank you!</h3>
+                <h3 className="text-3xl font-bold text-black mb-4">Tak!</h3>
                 <p className="text-lg text-neutral-600">
-                  We&apos;ll send your personalized recommendation to {email}
+                  Vi sender din personlige anbefaling til {email}
                 </p>
               </motion.div>
             )}

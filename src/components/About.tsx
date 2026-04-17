@@ -31,7 +31,7 @@ function BackToTop() {
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 15l-6-6-6 6"/>
       </svg>
-      <span className="text-sm font-medium">Back to top</span>
+      <span className="text-sm font-medium">Til top</span>
     </motion.button>
   )
 }
