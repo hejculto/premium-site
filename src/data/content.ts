@@ -99,7 +99,7 @@ export const portfolio = [
   },
   {
     id: 3,
-    title: 'Artisan Coffee Co.',
+    title: 'Local E-commerce Growth Strategy',
     category: 'Performance & Strategy',
     description: 'Led a complete e-commerce transformation for a Denmark-based brand, combining webshop optimization with a targeted advertising strategy. The result was a +100% increase in revenue, driven by improved conversion rates, stronger customer acquisition, and a scalable growth framework.',
     image: '/exp3.png',
