@@ -4,6 +4,7 @@ import {
   TransitionSection,
   QuizSection,
   ServicesTransition,
+  StrategicCTA,
   Portfolio,
   About,
   Services,
@@ -21,6 +22,7 @@ export default function Home() {
         <TransitionSection />
         <QuizSection />
         <ServicesTransition />
+        <StrategicCTA />
         <Portfolio />
         <About />
         <Services />
