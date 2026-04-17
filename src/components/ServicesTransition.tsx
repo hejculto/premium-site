@@ -18,11 +18,11 @@ export function ServicesTransition() {
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-[#0f0f0f]">
       <div className="container-premium px-6">
-        <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-3 md:gap-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+        <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-6 md:gap-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white">
             We build
           </h2>
-          <div className="h-8 md:h-10 lg:h-12 flex items-center justify-center md:justify-start">
+          <div className="h-12 md:h-16 lg:h-20 flex items-center justify-center md:justify-start">
             <AnimatePresence mode="wait">
               <motion.span
                 key={currentIndex}
@@ -30,7 +30,7 @@ export function ServicesTransition() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#ff6a3d]"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-[#ff6a3d]"
               >
                 {rotatingWords[currentIndex]}
               </motion.span>
