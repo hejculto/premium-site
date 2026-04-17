@@ -4,32 +4,12 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Globe, ShoppingCart, TrendingUp, Cpu, Lightbulb } from 'lucide-react'
 
-const services = [
-  { 
-    icon: Globe, 
-    title: 'Understand', 
-    description: 'I start by understanding your business, your goals, and where the real opportunities are.' 
-  },
-  { 
-    icon: ShoppingCart, 
-    title: 'Build', 
-    description: 'We design and build the right solution — whether it\'s your brand, website or ecommerce.' 
-  },
-  { 
-    icon: TrendingUp, 
-    title: 'Grow', 
-    description: 'We optimize and improve performance to help you attract, convert and scale.' 
-  },
-  { 
-    icon: Cpu, 
-    title: 'Systems', 
-    description: 'I implement tools and AI to automate, simplify and make your business more efficient.' 
-  },
-  { 
-    icon: Lightbulb, 
-    title: 'Think long-term', 
-    description: 'Everything is built with a clear strategy — not just for today, but for long-term growth.' 
-  },
+const icons = [
+  { icon: Globe },
+  { icon: ShoppingCart },
+  { icon: TrendingUp },
+  { icon: Cpu },
+  { icon: Lightbulb },
 ]
 
 export function TransitionSection() {
@@ -37,7 +17,7 @@ export function TransitionSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % services.length)
+      setActiveIndex((prev) => (prev + 1) % icons.length)
     }, 2000)
     return () => clearInterval(interval)
   }, [])
@@ -55,17 +35,17 @@ export function TransitionSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black transition-colors duration-500 hover:text-[#ff6a3d] mb-8 leading-tight">
             How I help you grow
           </h2>
-          <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-12">
-            A simple, practical approach to building and scaling your digital presence — from idea to execution.
+          <p className="text-xl md:text-2xl text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-12">
+            Jeg hjælper dig med at forstå din forretning, opbygge det rigtige digitale fundament og skabe vækst gennem strategi, design, e-handel og AI — og samle det hele i et system, der rent faktisk virker.
           </p>
 
           <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
-            {services.map((service, index) => {
-              const Icon = service.icon
+            {icons.map((item, index) => {
+              const Icon = item.icon
               const isActive = index === activeIndex
               return (
                 <motion.div
-                  key={service.title}
+                  key={index}
                   className="relative flex flex-col items-center"
                   initial={{ opacity: 0.4 }}
                   animate={{ 
@@ -76,18 +56,10 @@ export function TransitionSection() {
                   <Icon
                     size={34}
                     strokeWidth={1.5}
-                    className={`transition-colors duration-500 mb-2 ${
+                    className={`transition-colors duration-500 ${
                       isActive ? 'text-[#ff6a3d]' : 'text-black'
                     }`}
                   />
-                  <span className={`text-xs font-semibold transition-colors duration-500 ${
-                    isActive ? 'text-[#ff6a3d]' : 'text-black'
-                  }`}>
-                    {service.title}
-                  </span>
-                  <p className="text-[10px] text-neutral-500 max-w-[100px] mt-1">
-                    {service.description}
-                  </p>
                 </motion.div>
               )
             })}
