@@ -63,12 +63,12 @@ export function AdvisoryPlans() {
               FØRSTE SKRIDT
             </span>
             <h3 className="text-lg font-semibold text-white mb-2">
-              Strategic Analysis
+              Strategisk analyse
             </h3>
-            <p className="text-neutral-500 text-sm mb-4 flex-grow">
-              Get a clear breakdown of your current setup and where you&apos;re losing opportunities.
+            <p className="text-neutral-500 text-sm mb-3 flex-grow">
+              Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.
             </p>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2 mb-4">
               {strategicAnalysis.features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
@@ -78,7 +78,7 @@ export function AdvisoryPlans() {
             </ul>
             <div className="mt-auto">
               <div className="text-3xl font-bold text-[#ff6a3d] mb-1">0 DKK</div>
-              <p className="text-xs text-neutral-500 mb-4">One-time</p>
+              <p className="text-xs text-neutral-500 mb-3">Engangsydelse</p>
               <motion.button
                 onClick={scrollToContact}
                 className="w-full px-5 py-3 bg-[#ff6a3d] text-white font-medium rounded-xl hover:bg-[#ff6a3d]/90 transition-colors flex items-center justify-center gap-2 text-sm"
