@@ -11,7 +11,7 @@ export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<typeof portfolio[0] | null>(null)
 
   return (
-    <section id="work" className="section-padding bg-card/50">
+    <section id="work" className="pt-24 md:pt-32 pb-8 bg-card/50">
       <div className="container-premium">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,18 +74,6 @@ export function Portfolio() {
             </motion.article>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <a href="#contact" className="btn-secondary">
-            View All Projects
-          </a>
-        </motion.div>
       </div>
 
       <AnimatePresence>
