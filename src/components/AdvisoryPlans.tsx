@@ -9,7 +9,6 @@ const strategicAnalysis = {
   id: 'analysis',
   name: '0 DKK — Strategic Analysis',
   description: 'Get a clear, expert breakdown of your current setup and where you\'re losing opportunities.',
-  fullDescription: 'I\'ll review your website, strategy, advertising, or AI implementation and identify what\'s working, what\'s not, and where the biggest growth opportunities are. No fluff. No generic advice. Just actionable insights you can use immediately.',
   features: [
     'Website & conversion analysis',
     'Strategy & positioning review',
@@ -50,57 +49,49 @@ export function AdvisoryPlans() {
           </p>
         </motion.div>
 
-        {/* 0 DKK Strategic Analysis - Full width card */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto mb-12"
-        >
-          <div className="bg-[#0f0f0f] rounded-2xl p-8 lg:p-12 border border-[#ff6a3d]/30">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
-              <div className="lg:max-w-md">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#ff6a3d] mb-2 block">
-                  First Step
-                </span>
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
-                  {strategicAnalysis.name}
-                </h3>
-                <p className="text-neutral-400 mb-6">
-                  {strategicAnalysis.description}
-                </p>
-                <p className="text-sm text-neutral-500 mb-6">
-                  {strategicAnalysis.fullDescription}
-                </p>
-                <ul className="space-y-3">
-                  {strategicAnalysis.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-neutral-400">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="lg:text-right lg:min-w-[200px]">
-                <div className="text-5xl lg:text-6xl font-bold text-[#ff6a3d] mb-2">0 DKK</div>
-                <p className="text-sm text-neutral-500 mb-6">One-time offer</p>
-                <motion.button
-                  onClick={scrollToContact}
-                  className="w-full lg:w-auto px-8 py-4 bg-[#ff6a3d] text-white font-medium rounded-full hover:bg-[#ff6a3d]/90 transition-colors flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {strategicAnalysis.cta}
-                  <ArrowRight className="w-4 h-4" />
-                </motion.button>
-              </div>
+        {/* All plans in one grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 0 DKK Strategic Analysis - First card */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-[#0f0f0f] rounded-2xl p-6 border border-[#ff6a3d]/30 flex flex-col"
+          >
+            <span className="text-[10px] font-mono uppercase tracking-wider text-[#ff6a3d] mb-2 block">
+              First Step
+            </span>
+            <h3 className="text-lg font-semibold text-white mb-2">
+              Strategic Analysis
+            </h3>
+            <p className="text-neutral-500 text-sm mb-4 flex-grow">
+              Get a clear breakdown of your current setup and where you&apos;re losing opportunities.
+            </p>
+            <ul className="space-y-2 mb-6">
+              {strategicAnalysis.features.map((feature, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
+                  <span className="text-xs text-neutral-400">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto">
+              <div className="text-3xl font-bold text-[#ff6a3d] mb-1">0 DKK</div>
+              <p className="text-xs text-neutral-500 mb-4">One-time</p>
+              <motion.button
+                onClick={scrollToContact}
+                className="w-full px-5 py-3 bg-[#ff6a3d] text-white font-medium rounded-xl hover:bg-[#ff6a3d]/90 transition-colors flex items-center justify-center gap-2 text-sm"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {strategicAnalysis.cta}
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Existing paid plans */}
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
+          {/* Paid plans */}
           {advisoryPlans.map((plan, i) => (
             <motion.div
               key={plan.id}
@@ -109,40 +100,40 @@ export function AdvisoryPlans() {
               viewport={{ once: true }}
               transition={{
                 duration: 0.6,
-                delay: i * 0.1,
+                delay: (i + 1) * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
               className={cn(
-                'relative rounded-2xl p-8 lg:p-10',
+                'relative rounded-2xl p-6 flex flex-col',
                 plan.highlighted
-                  ? 'bg-[#0f0f0f] border-2 border-[#ff6a3d] lg:-mt-4 lg:mb-4'
+                  ? 'bg-[#0f0f0f] border-2 border-[#ff6a3d]'
                   : 'bg-[#0f0f0f]/50 border border-foreground/5'
               )}
             >
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="text-xs font-mono uppercase tracking-wider bg-[#ff6a3d] text-white px-4 py-1 rounded-full">
+                  <span className="text-[10px] font-mono uppercase tracking-wider bg-[#ff6a3d] text-white px-3 py-1 rounded-full">
                     Most Popular
                   </span>
                 </div>
               )}
 
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
-                <p className="text-neutral-500 text-sm mb-6">{plan.description}</p>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-white">
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold text-white mb-1">{plan.name}</h3>
+                <p className="text-neutral-500 text-xs mb-4">{plan.description}</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl font-bold text-white">
                     {formatCurrency(plan.price)}
                   </span>
-                  <span className="text-neutral-500">/ {plan.period}</span>
+                  <span className="text-neutral-500 text-sm">/ {plan.period}</span>
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-2 mb-6 flex-grow">
                 {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-neutral-400 leading-relaxed">
+                  <li key={j} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-neutral-400 leading-relaxed">
                       {feature}
                     </span>
                   </li>
@@ -152,7 +143,7 @@ export function AdvisoryPlans() {
               <motion.button
                 onClick={scrollToContact}
                 className={cn(
-                  'w-full group flex items-center justify-center gap-2 py-4 rounded-xl font-medium transition-all',
+                  'w-full group flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all text-sm mt-auto',
                   plan.highlighted
                     ? 'bg-[#ff6a3d] text-white hover:bg-[#ff6a3d]/90'
                     : 'bg-white/5 hover:bg-white/10 text-white'
