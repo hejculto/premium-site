@@ -3,33 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
-import { advisoryPlans } from '@/data/content'
+import { pricingPlans, strategicAnalysis, footerNote } from '@/data/content'
 import { formatCurrency, cn } from '@/lib/utils'
 import { Modal, FormModalContent } from './Modal'
-
-const strategicAnalysis = {
-  id: 'analysis',
-  modalTitle: 'Strategisk analyse — 0 DKK',
-  planLabel: 'Strategisk analyse',
-}
-
-const pricingPlans = [
-  {
-    id: 'monthly',
-    modalTitle: 'Månedlig samarbejde — 5.000 kr.',
-    planLabel: 'Månedlig',
-  },
-  {
-    id: 'quarterly',
-    modalTitle: 'Kvartalsvis samarbejde — 40.000 kr.',
-    planLabel: 'Kvartalsvis',
-  },
-  {
-    id: 'annual',
-    modalTitle: 'Årligt samarbejde — 120.000 kr.',
-    planLabel: 'Årlig',
-  },
-]
 
 export function AdvisoryPlans() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -44,6 +20,13 @@ export function AdvisoryPlans() {
     setModalOpen(false)
     setSelectedPlan(null)
   }
+
+  const allPlans = [
+    { id: strategicAnalysis.id, modalTitle: strategicAnalysis.modalTitle, planLabel: strategicAnalysis.planLabel },
+    ...pricingPlans.map(p => ({ id: p.id, modalTitle: p.modalTitle, planLabel: p.planLabel }))
+  ]
+
+  const getPlanForModal = (index: number) => allPlans[index]
 
   return (
     <section id="advisory" className="py-16 md:py-20 lg:py-24 bg-card/50">
@@ -86,7 +69,7 @@ export function AdvisoryPlans() {
                 Strategisk analyse
               </h3>
               <p className="text-neutral-500 text-sm mb-3">
-                Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.
+                Få et klart overblik over, hvor du mister vækst — og hvad du skal gøre først.
               </p>
               <ul className="space-y-2 mb-4">
                 {[
@@ -115,8 +98,8 @@ export function AdvisoryPlans() {
             </motion.button>
           </motion.div>
 
-          {/* Paid plans */}
-          {advisoryPlans.map((plan, i) => (
+          {/* Pricing plans */}
+          {pricingPlans.map((plan, i) => (
             <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 40 }}
@@ -129,34 +112,32 @@ export function AdvisoryPlans() {
               }}
               className={cn(
                 'relative rounded-2xl p-6 flex flex-col justify-between',
-                plan.highlighted
+                plan.isHighlighted
                   ? 'bg-[#0f0f0f] border-2 border-[#ff6a3d]'
                   : 'bg-[#0f0f0f]/50 border border-foreground/5'
               )}
             >
-              {plan.id === 'monthly' && (
+              {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white border border-white/30 px-3 py-1 rounded-full">
-                    Starter
-                  </span>
-                </div>
-              )}
-              {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="text-[10px] font-mono uppercase tracking-wider bg-[#ff6a3d] text-white px-3 py-1 rounded-full">
-                    Mest populær
+                  <span className={cn(
+                    'text-[10px] font-mono uppercase tracking-wider px-3 py-1 rounded-full',
+                    plan.badge === 'MEST POPULÆR' 
+                      ? 'bg-[#ff6a3d] text-white'
+                      : 'bg-white/10 text-white border border-white/30'
+                  )}>
+                    {plan.badge}
                   </span>
                 </div>
               )}
 
               <div>
-                <h3 className="text-lg font-semibold text-white mb-1">{plan.name}</h3>
+                <h3 className="text-lg font-semibold text-white mb-1">{plan.title}</h3>
                 <p className="text-neutral-500 text-xs mb-3">{plan.description}</p>
                 <div className="flex items-baseline gap-1 mb-3">
                   <span className="text-3xl font-bold text-white">
                     {formatCurrency(plan.price)}
                   </span>
-                  <span className="text-neutral-500 text-sm">/ {plan.period}</span>
+                  <span className="text-neutral-500 text-xs">{plan.priceSuffix}</span>
                 </div>
 
                 <ul className="space-y-2 mb-4">
@@ -172,10 +153,10 @@ export function AdvisoryPlans() {
               </div>
 
               <motion.button
-                onClick={() => openModal(pricingPlans[i])}
+                onClick={() => openModal(getPlanForModal(i + 1))}
                 className={cn(
                   'w-full group flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all text-sm',
-                  plan.highlighted
+                  plan.isHighlighted
                     ? 'bg-[#ff6a3d] text-white hover:bg-[#ff6a3d]/90'
                     : 'bg-white/5 hover:bg-white/10 text-white'
                 )}
@@ -196,7 +177,7 @@ export function AdvisoryPlans() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center text-neutral-500 text-sm mt-12"
         >
-          Custom enterprise solutions available on request.
+          {footerNote}
         </motion.p>
       </div>
 

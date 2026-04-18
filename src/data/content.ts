@@ -75,7 +75,7 @@ export const portfolio = [
   },
   {
     id: 3,
-    title: 'Lokal E-handel Vækst',
+    title: 'Local E-commerce Growth Strategy',
     category: 'Performance & Strategi',
     description: 'Komplet e-handel transformation for et dansk brand. Resultatet var over 100% increase i omsætningdrevet af forbedrede konverteringsrater og stærkere kundeopbygning.',
     image: '/exp3.png',
@@ -88,63 +88,6 @@ export const portfolio = [
     description: 'Målet var at positionere brandet som professionelt og tilgængeligt på markedet. Vi gennemgik en komplet brandrefresh med dybdegående markedserhverv, hvilket resulterede i en raffineret visuel identitet.',
     image: '/exp4.png',
     tags: ['Brand Identitet'],
-  },
-]
-
-export const advisoryPlans = [
-  {
-    id: 'monthly',
-    name: 'Månedlig',
-    price: 5000,
-    period: 'per måned',
-    description: 'Perfekt til mindre løbende optimering og drift',
-    features: [
-      'Shopify optimering & vedligehold',
-      'Design & mindre udviklingsopgaver',
-      'Video- og content redigering',
-      'Meta annoncering (1–2 kampagner)',
-      'Månedlig check-in',
-      'Email support (48h svar)',
-    ],
-    cta: 'Kom i gang',
-    highlighted: false,
-  },
-  {
-    id: 'quarterly',
-    name: 'Kvartalsvis',
-    price: 40000,
-    period: 'per kvartal',
-    description: 'Tæt samarbejde med fokus på vækst',
-    features: [
-      'Kvartalsvis strategisk analyse i dybden',
-      'Ubegrænset design & udvikling',
-      'Månedlig content produktion',
-      'Annoncering (Meta / Google)',
-      'Performance reviews hver 2. uge',
-      'Prioriteret support (24h svar)',
-      'AI workflow audit & optimering',
-    ],
-    cta: 'Kom i gang',
-    highlighted: true,
-  },
-  {
-    id: 'annual',
-    name: 'Årlig',
-    price: 120000,
-    period: 'per år',
-    description: 'Langsigtet vækst og skalering',
-    features: [
-      'Årlig strategi & roadmap',
-      'Ubegrænset alle ydelser',
-      'Kontinuerlig content pipeline',
-      'Ubegrænsede kampagner',
-      'Ugentlige performance dashboards',
-      'Realtids prioriteret support',
-      'AI transformationsprogram',
-      '2 kvartalsvise strategimøder',
-    ],
-    cta: 'Lad os tage en snak',
-    highlighted: false,
   },
 ]
 
@@ -171,6 +114,75 @@ export const whyWork = [
     statLabel: 'Gennemsnitlig ROI',
   },
 ]
+
+export const pricingPlans = [
+  {
+    id: 'starter',
+    badge: 'STARTER',
+    title: 'Starter',
+    description: 'Perfekt til virksomheder, der vil optimere og teste samarbejdet.',
+    price: 5000,
+    priceSuffix: '/ måned ekskl. moms',
+    features: [
+      'Shopify optimering & vedligehold',
+      'Mindre designopgaver',
+      'Content redigering (foto/video)',
+      'Meta annoncering (1 kampagne)',
+      'Månedlig check-in',
+      'Email support',
+    ],
+    cta: 'Kom i gang',
+    modalTitle: 'Starter — 5.000 kr. / måned ekskl. moms',
+    planLabel: 'Starter',
+    isHighlighted: false,
+  },
+  {
+    id: 'growth',
+    badge: 'MEST POPULÆR',
+    title: 'Vækst',
+    description: 'For virksomheder, der vil vækste med en fast partner.',
+    price: 12500,
+    priceSuffix: '/ måned ekskl. moms',
+    features: [
+      'Løbende design & udvikling',
+      'Månedlig content produktion',
+      'Meta & Google Ads',
+      'Performance tracking',
+      '2x månedlige check-ins',
+      'Prioriteret support',
+    ],
+    cta: 'Kom i gang',
+    modalTitle: 'Vækst — 12.500 kr. / måned ekskl. moms',
+    planLabel: 'Vækst',
+    isHighlighted: true,
+  },
+  {
+    id: 'scale',
+    badge: '',
+    title: 'Scale',
+    description: 'For virksomheder, der vil skalere med et stærkt digitalt setup.',
+    price: 25000,
+    priceSuffix: '/ måned ekskl. moms',
+    features: [
+      'Ubegrænset design & udvikling',
+      'Content pipeline',
+      'Multi-channel annoncering',
+      'Ugentlige performance reviews',
+      'AI workflow optimering',
+      'Prioriteret adgang',
+    ],
+    cta: 'Lad os tage en snak',
+    modalTitle: 'Scale — 25.000 kr. / måned ekskl. moms',
+    planLabel: 'Scale',
+    isHighlighted: false,
+  },
+]
+
+export const strategicAnalysis = {
+  id: 'analysis',
+  modalTitle: 'Strategisk analyse — 0 DKK',
+  planLabel: 'Strategisk analyse',
+}
 
 export const about = {
   headline: 'Din partner i\ndigital excellence',
@@ -205,3 +217,5 @@ export const footer = {
     { label: 'Twitter', href: '#' },
   ],
 }
+
+export const footerNote = 'Skræddersyede løsninger til virksomheder tilbydes efter behov.'

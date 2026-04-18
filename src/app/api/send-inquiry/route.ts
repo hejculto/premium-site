@@ -24,6 +24,8 @@ Navn: ${name}
 E-mail: ${email}
 
 Tidspunkt: ${timestamp}
+
+Kilde: Pricing sektionen
     `.trim()
 
     console.log('=== NEW INQUIRY ===')
