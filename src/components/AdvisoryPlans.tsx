@@ -46,7 +46,7 @@ export function AdvisoryPlans() {
   }
 
   return (
-    <section id="advisory" className="py-24 md:py-32 bg-card/50">
+    <section id="advisory" className="py-16 md:py-20 lg:py-24 bg-card/50">
       <div className="container-premium px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
