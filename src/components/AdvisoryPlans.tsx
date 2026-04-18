@@ -1,29 +1,48 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
 import { advisoryPlans } from '@/data/content'
 import { formatCurrency, cn } from '@/lib/utils'
+import { Modal, FormModalContent } from './Modal'
 
 const strategicAnalysis = {
   id: 'analysis',
-  name: 'Strategisk analyse',
-  description: 'Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.',
-  features: [
-    'Hjemmeside & konverteringsanalyse',
-    'Strategi & positionering',
-    'Annoncering performance',
-    'AI muligheder & automatisering',
-  ],
-  cta: 'Få din analyse',
+  modalTitle: 'Strategisk analyse — 0 DKK',
+  planLabel: 'Strategisk analyse',
 }
 
+const pricingPlans = [
+  {
+    id: 'monthly',
+    modalTitle: 'Månedlig samarbejde — 5.000 kr.',
+    planLabel: 'Månedlig',
+  },
+  {
+    id: 'quarterly',
+    modalTitle: 'Kvartalsvis samarbejde — 40.000 kr.',
+    planLabel: 'Kvartalsvis',
+  },
+  {
+    id: 'annual',
+    modalTitle: 'Årligt samarbejde — 120.000 kr.',
+    planLabel: 'Årlig',
+  },
+]
+
 export function AdvisoryPlans() {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const [modalOpen, setModalOpen] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState<{ id: string; modalTitle: string; planLabel: string } | null>(null)
+
+  const openModal = (plan: { id: string; modalTitle: string; planLabel: string }) => {
+    setSelectedPlan(plan)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+    setSelectedPlan(null)
   }
 
   return (
@@ -70,7 +89,12 @@ export function AdvisoryPlans() {
                 Få et klart overblik over din nuværende opsætning og hvor du mister muligheder.
               </p>
               <ul className="space-y-2 mb-4">
-                {strategicAnalysis.features.map((feature, i) => (
+                {[
+                  'Hjemmeside & konverteringsanalyse',
+                  'Strategi & positionering',
+                  'Annoncering performance',
+                  'AI muligheder & automatisering',
+                ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-[#ff6a3d] flex-shrink-0 mt-0.5" />
                     <span className="text-xs text-neutral-400">{feature}</span>
@@ -81,12 +105,12 @@ export function AdvisoryPlans() {
               <p className="text-xs text-neutral-500 mb-4">Engangsydelse</p>
             </div>
             <motion.button
-              onClick={scrollToContact}
+              onClick={() => openModal(strategicAnalysis)}
               className="w-full px-5 py-3 bg-[#ff6a3d] text-white font-medium rounded-xl hover:bg-[#ff6a3d]/90 transition-colors flex items-center justify-center gap-2 text-sm"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {strategicAnalysis.cta}
+              Få din analyse
               <ArrowRight className="w-4 h-4" />
             </motion.button>
           </motion.div>
@@ -148,7 +172,7 @@ export function AdvisoryPlans() {
               </div>
 
               <motion.button
-                onClick={scrollToContact}
+                onClick={() => openModal(pricingPlans[i])}
                 className={cn(
                   'w-full group flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all text-sm',
                   plan.highlighted
@@ -175,6 +199,12 @@ export function AdvisoryPlans() {
           Custom enterprise solutions available on request.
         </motion.p>
       </div>
+
+      <Modal isOpen={modalOpen} onClose={closeModal}>
+        {selectedPlan && (
+          <FormModalContent plan={selectedPlan} onClose={closeModal} />
+        )}
+      </Modal>
     </section>
   )
 }
