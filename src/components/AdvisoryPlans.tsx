@@ -110,10 +110,17 @@ export function AdvisoryPlans() {
                   : 'bg-[#0f0f0f]/50 border border-foreground/5'
               )}
             >
+              {plan.id === 'monthly' && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className="text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white border border-white/30 px-3 py-1 rounded-full">
+                    Starter
+                  </span>
+                </div>
+              )}
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="text-[10px] font-mono uppercase tracking-wider bg-[#ff6a3d] text-white px-3 py-1 rounded-full">
-                    Most Popular
+                    Mest populær
                   </span>
                 </div>
               )}
